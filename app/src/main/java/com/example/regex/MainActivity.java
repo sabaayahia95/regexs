@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mmTextview = findViewById (R.id.t2);
-        String re = "[a-zA-Z0-9]";
+        String re = "(\\s*(^[A-Z_a-z]{1,32})(\\s*)(\\s*=\\s*\\d+))\\s*;$";
         Pattern pt= Pattern.compile(re);
         Matcher mt = pt.matcher( mmTextview.getText());
 
